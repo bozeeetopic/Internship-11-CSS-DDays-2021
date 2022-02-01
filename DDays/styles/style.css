@@ -11,8 +11,92 @@
 /*--dump-past-section--*/
 /*--footer-section--*/
 
+
 /*bg-black - #0A181B*/
-/*blue - #30CEC2*/
+/*green - #30CEC2*/
 /*red - #ED5C5F*/
 /*body-highlight - #FFFFFF 80%*/
 /*dark-blue - #1A3B44*/
+
+
+/*--global--*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fuse V.2 Display";
+    color: white;
+}
+
+a {
+    text-decoration: none;  
+}
+h1 {
+    font-size: 64px;
+    line-height: 77px;
+}
+h2 {
+    font-size: 48px;
+    line-height: 58px;
+}
+h3 {
+    font-size: 32px;
+    line-height: 38px;
+}
+h4 {
+    font-size: 12px;
+    line-height: 13.54px;
+    padding: 8px 4px;
+}
+h5 {
+    font-size: 20px;
+    line-height: 30px;
+}
+h6 {
+    font-size: 24px;
+    line-height: 30px;
+}
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.green {
+    color: #30CEC2;
+    border-color: #30CEC2;
+}
+.green *{
+    color: #30CEC2;
+}
+.gray {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/*--nav-section--*/
+
+/*--header-section--*/
+
+/*--conference-section--*/
+
+/*--info-guy-section--*/
+
+/*--info-girl-section--*/
+
+/*--info-all-section--*/
+
+/*--schedule-section--*/
+
+/*--sponsors-section--*/
+
+/*--sign-in-section--*/
+
+/*--dump-past-section--*/
+
+/*--footer-section--*/
+footer  h6 {
+    font-size: 18px;
+}
