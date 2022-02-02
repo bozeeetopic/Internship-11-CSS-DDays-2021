@@ -11,7 +11,10 @@
 /*--dump-past-section--*/
 /*--footer-section--*/
 
-
+@font-face {
+    font-family: "Fuse V.2 Display";
+    src: url(./../assets/fonts/FuseV.2Display-Regular.otf);
+}
 /*bg-black - #0A181B*/
 /*green - #30CEC2*/
 /*red - #ED5C5F*/
@@ -19,10 +22,10 @@
 /*dark-blue - #1A3B44*/
 
 img {
-    max-width: 300px;
+    max-width: 90vw;
 }
 p {
-    max-width: 300px;
+    max-width: 90vw;
 }
 
 /*--global--*/
@@ -136,117 +139,152 @@ nav {
     padding:24px;
     height: 100px;
     width: 100%;
-  }
-
-.letter-logo {
-width: 26px;
-height: 31px;
-margin-left: 8px;
-transition: all 0.5s ease-in-out;
-}
-.big-logo{
+      }
+    
+    .letter-logo {
+    width: 26px;
+    height: 31px;
+    margin-left: 8px;
+    transition: all 0.5s ease-in-out;
+    }
+    
+    .big-logo{
     display:none;
-}
-
-.hamburger{
-display: flex;
-flex-direction: column;
-width: 24px;
-height: 14px;
-justify-content: space-between;
-transition: all 0.5s ease-in-out;
-}
-
-.hamburger > div {
-width: 100%;
-height: 1px;
-background-color: white;
-transition: all 0.5s ease-in-out;
-}
-
-.navbar {
-display: flex;
-flex-direction: column;
-align-items: center;
-position:absolute;
-height: 100%;
-width: 100vw;
-top:-4000vw;
-left:0;
-background-color: #0A181B;
-transition: all 0.5s ease-in-out;
-z-index: 2;
-}
-
-.hidden {
-opacity: 0;
-position: fixed;
-top:-400vw;
-}
-
-.hidden:checked ~ .navbar {
-top:97px;
-}
-
-.hidden:checked ~ .letter-logo {
-width: 33px;
-height: 40px;
-margin-left: 0;
-}
-
-.hidden:checked ~ .hamburger {
-justify-content: center;
-position: relative;
-height: 0px;
-}
-
-.hidden:checked ~ .hamburger > div:first-child{
-position: absolute;
-transform: rotate(45deg);
-}
-.hidden:checked ~ .hamburger > div:nth-child(2n){
-opacity: 0;
-}
-.hidden:checked ~ .hamburger > div:last-child{
-position: absolute;
-transform: rotate(-45deg);
-}
-
-.navbar__item {
-margin-top: 50px;
-}
-
-.navbar button {
-color: white;
-}
-
-@media only screen and (min-width:1440px) {
-.letter-logo{
+    }
+    
+    .hamburger{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 14px;
+    transition: all 0.5s ease-in-out;
+    margin-right: 11px;
+    }
+    
+    .hamburger > div {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+    }
+    
+    .hamburger > div :nth-child(2n) {
+    transition: all 1s ease-out;
+    }
+    
+    .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    height: 100%;
+    width: 100vw;
+    top:-4000vw;
+    left:0;
+    background-color: #0A181B;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    }
+    
+    .navbar p {
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    }
+    
+    .hidden {
+    opacity: 0;
+    position: fixed;
+    top:-400vw;
+    }
+    
+    .hidden:checked ~ .navbar {
+    top:97px;
+    }
+    
+    .hidden:checked ~ .letter-logo {
+    width: 33px;
+    height: 40px;
+    margin-left: 0;
+    }
+    
+    .hidden:checked ~ .hamburger {
+    height: 0;
+    }
+    
+    .hidden:checked ~ .hamburger > div:first-child{
+    position: absolute;
+    transform: rotate(45deg);
+    }
+    .hidden:checked ~ .hamburger > div:nth-child(2n){
+    position: absolute;
+    height: 24px;
+    opacity: 0;
+    transition: all 0s ease-in;
+    }
+    .hidden:checked ~ .hamburger > div:last-child{
+    position: absolute;
+    transform: rotate(-45deg);
+    }
+    
+    .navbar__item {
+    margin-top: 50px;
+    }
+    
+    .navbar button {
+    color: white;
+    }
+    
+    @media only screen and (min-width:768px) {
+    .letter-logo{
     display:none;
-}
-.big-logo{
+    }
+    .big-logo{
     display:block;
-}}
-
-/*--header-section--*/
-
-/*--conference-section--*/
-
-/*--info-guy-section--*/
-
-/*--info-girl-section--*/
-
-/*--info-all-section--*/
-
-/*--schedule-section--*/
-
-/*--sponsors-section--*/
-
-/*--sign-in-section--*/
-
-/*--dump-past-section--*/
-
-/*--footer-section--*/
-footer  h6 {
-    font-size: 18px;
-}
+    }
+    .hamburger {
+    display: none;
+    }
+    .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:static;
+    width: fit-content;
+    }
+    .navbar p {
+        font-weight: 400;
+    }
+    .invisible-text{
+        display: none;
+    }
+    .navbar__item {
+    margin-left: 40px;
+    margin-top: 0;
+    }}
+    
+    
+    /*--header-section--*/
+    
+    /*--conference-section--*/
+    
+    /*--info-guy-section--*/
+    
+    /*--info-girl-section--*/
+    
+    /*--info-all-section--*/
+    
+    /*--schedule-section--*/
+    
+    /*--sponsors-section--*/
+    
+    /*--sign-in-section--*/
+    
+    /*--dump-past-section--*/
+    
+    /*--footer-section--*/
+    footer  h6 {
+        font-size: 18px;
+    }
