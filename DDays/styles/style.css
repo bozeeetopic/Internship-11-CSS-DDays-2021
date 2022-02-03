@@ -157,6 +157,13 @@ p {
     margin-top: 14.8px;
 }
 
+@media only screen and (min-width:768px) {
+    .conference__wrapper {
+        width:100%;
+        display:flex;
+        justify-content: center;
+    }
+    }
 /*--info-guy-section--*/
 
 /*--info-girl-section--*/
