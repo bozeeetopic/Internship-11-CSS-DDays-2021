@@ -189,6 +189,21 @@ p {
     margin-top: 7.4px;
 }
 
+@media only screen and (min-width:768px) {
+    .info--all {
+        padding: 0 50px;
+    }
+    .info--all .info__stats {
+        display: flex;
+        justify-content: space-between;
+    }
+    .info--all .info__stats__item {
+        width: 50%;
+    }
+    .info__stats__item {
+        margin-left: -25px;
+    }
+}
 
 /*--schedule-section--*/
 
