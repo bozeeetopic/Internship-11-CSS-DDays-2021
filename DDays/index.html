@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
     <title> DUMP Days 2021
     </title>
   </head>
@@ -57,9 +58,9 @@
     </header>
 
     <section class="conference">
-      <img src="./assets/images/info-start.png" alt="Conference room talk">
+      <img class="conference_image" src="./assets/images/info-start.png" alt="Conference room talk">
       <div class="conference__wrapper">
-        <img src="./assets/images/background-shapes/bg-half-circle-in-water.png" alt="Half-circle in water">
+        <img class="background" src="./assets/images/background-shapes/bg-half-circle-in-water.png" alt="Half-circle in water">
         <div class="conference__wrapper__text">
           <h2>Dev, Dizajn, Marketing & Texh konferencija</h2>
           <p>DUMP Days konferencija se nakon godine stanke vraća u novom formatu!
@@ -68,77 +69,91 @@
              zavirite u poslovni svijet i saznajte kako započeti svoju karijeru.</p>
         </div>
       </div>
-      <img src="./assets/images/background-shapes/bg-ball-small.png" alt="Ballotini">
+      <img class="background" src="./assets/images/background-shapes/bg-ball-small.png" alt="Ballotini">
     </section>
         
-    <section class="info-guy">
-      <div class="info-guy__stats">
-        <div class="info-guy__stats__item">
-          <img src="./assets/images/icons/ico-person-stats.png" alt="Stats">
-          <h3>Online predavanja</h3>
-          <p>Pridruži se zanimljivim predavanjima stručnjaka o aktualnim Dev, Design, Marketing & Tech temama.</p>
-        </div>
-        <div class="info-guy__stats__item">
-          <img src="./assets/images/icons/ico-table-microphone.png" alt="Microphone table">
-          <h3>Online panel rasprave</h3>
-          <p>Kroz moderirane rasprave saznaj kakva su mišljenja profesionalaca o zanimljivim temama iz IT svijeta.</p>
-        </div>
-        <div class="info-guy__stats__item">
-          <img src="./assets/images/icons/ico-screen-stats.png" alt="PC screen">
-          <h3>Radionice</h3>
-          <p>Praktičan rad na radionicama koje vode stručnjaci za najnovije tehnologije obogatit će te novim vještinama.</p>
+    <section class="info">
+      <div class="info--guy">
+        <img class="info__image" src="./assets/images/info-guy.png" alt="Conference guy">
+        <div class="info__stats">
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-person-stats.png" alt="Stats">
+            <div class="info__stats__item__text">
+              <h3>Online predavanja</h3>
+              <p>Pridruži se zanimljivim predavanjima stručnjaka o aktualnim Dev, Design, Marketing & Tech temama.</p>
+            </div>
+          </div>
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-table-microphone.png" alt="Microphone table">
+            <div class="info__stats__item__text">
+              <h3>Online panel rasprave</h3>
+              <p>Kroz moderirane rasprave saznaj kakva su mišljenja profesionalaca o zanimljivim temama iz IT svijeta.</p>
+            </div>
+          </div>
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-screen-stats.png" alt="PC screen">
+            <div class="info__stats__item__text">
+              <h3>Radionice</h3>
+              <p>Praktičan rad na radionicama koje vode stručnjaci za najnovije tehnologije obogatit će te novim vještinama.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="info-guy__image">
-        <img src="./assets/images/info-guy.png" alt="Conference guy">
-      </div>
-    </section>
 
-    <section class="info-girl">
-      <div class="info-girl__image">
-        <img src="./assets/images/info-girl.png" alt="Conference girl">
-      </div>
-      <div class="info-girl__stats">
-        <div class="info-girl__stats__item">
-          <img src="./assets/images/icons/ico-bullseye.png" alt="Bullseye">
-          <h3>Fly talks</h3>
-          <p>Tražiš posao? Porazgovaraj s poslodavcima oči u oči i saznaj jesi li upravo ti ono što im treba.</p>
+      <div class="info--girl">
+        <img class="info__image" src="./assets/images/info-girl.png" alt="Conference girl">
+        <div class="info__stats">
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-bullseye.png" alt="Bullseye">
+            <div class="info__stats__item__text">
+              <h3>Fly talks</h3>
+              <p>Tražiš posao? Porazgovaraj s poslodavcima oči u oči i saznaj jesi li upravo ti ono što im treba.</p>
+            </div>
+          </div>
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-trophy.png" alt="Trophy">
+            <div class="info__stats__item__text">
+              <h3>Nagrade</h3>
+              <p>Iskaži se u ispunjavanju zadataka koji će ti omogućiti uživanje u vrijednim nagradama.</p>
+            </div>
+          </div>
         </div>
-        <div class="info-girl__stats__item">
-          <img src="./assets/images/icons/ico-trophy.png" alt="Trophy">
-          <h3>Nagrade</h3>
-          <p>Iskaži se u ispunjavanju zadataka koji će ti omogućiti uživanje u vrijednim nagradama.</p>
-        </div>
       </div>
-    </section>
 
-    <section class="info-all">
-      <img src="./assets/images/background-shapes/bg-circle-on-water.png" alt="Circle on water">
-      <div class="info-all__text">
-        <h2>Kako će DUMP Days izgledati 2021.?</h2>
-        <p>Ove godine donosimo konferenciju u hibridnom obliku!
-          Nudimo mnoštvo sadržaja na FESB-u, ali i za sve koji odluče sudjelovati iza svojih ekrana.</p>
-      </div>
-      <div class="info-all__stats">
-        <div class="info-all__stats__item">
-          <img src="./assets/images/icons/ico-3-people.png" alt="3 people">
-          <h3>Uživo</h3>
-          <p>Uz prethodnu prijavu na aplikaciji te poštivajući epidemiološke mjere, uživo sudjeluj na radionicama, 
-            druži se s predstavnicima IT tvrtki i razgovaraj s budućim poslodavcima.
+      <div class="info--all">
+        <img class="background" src="./assets/images/background-shapes/bg-circle-on-water.png" alt="Circle on water">
+        <div class="info--all__text">
+          <h2>Kako će DUMP Days izgledati 2021.?</h2>
+          <p>
+            Ove godine donosimo konferenciju u hibridnom obliku!
+            Nudimo mnoštvo sadržaja na FESB-u, ali i za sve koji odluče sudjelovati iza svojih ekrana.
           </p>
         </div>
-        <div class="info-all__stats__item">
-          <img src="./assets/images/icons/ico-wifi-screen.png" alt="Wifi screen">
-          <h3>Online</h3>
-          <p>Na našem YouTube kanalu, u stvarnom vremenu, prati sva predavanja i panel rasprave u kojima 
-            imaš priliku poslušati iskustva brojnih stručnjaka iz svijeta IT-ja. 
-          </p>
+        <div class="info__stats">
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-3-people.png" alt="3 people">
+            <div class="info__stats__item__text">
+              <h3>Uživo</h3>
+              <p>Uz prethodnu prijavu na aplikaciji te poštivajući epidemiološke mjere, uživo sudjeluj na radionicama, 
+                druži se s predstavnicima IT tvrtki i razgovaraj s budućim poslodavcima.
+              </p>
+            </div>
+          </div>
+          <div class="info__stats__item">
+            <img src="./assets/images/icons/ico-wifi-screen.png" alt="Wifi screen">
+            <div class="info__stats__item__text">
+              <h3>Online</h3>
+              <p>Na našem YouTube kanalu, u stvarnom vremenu, prati sva predavanja i panel rasprave u kojima 
+                imaš priliku poslušati iskustva brojnih stručnjaka iz svijeta IT-ja. 
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="schedule">
-      <img src="./assets/images/background-shapes/bg-half-circle-on-water.png" alt="Half-circle on water">
+      <img class="background" src="./assets/images/background-shapes/bg-half-circle-on-water.png" alt="Half-circle on water">
       <h2>Raspored</h2>
 
       <div class="schedule__date-buttons">
@@ -289,7 +304,7 @@
       <div class="sponsors__golden">
         <div class="sponsors__golden__item">
           <img src="./assets/images/golden-extension-engine.png" alt="Extension engine">
-          <img src="./assets/images/background-shapes/bg-ball-tiny.png" alt="Balottini">
+          <img class="background" src="./assets/images/background-shapes/bg-ball-tiny.png" alt="Balottini">
           <div class="sponsors__golden__item__text">
             <h4>ZLATNI SPONZOR</h4>
             <h3>ExtensionEngine</h3>
@@ -306,7 +321,7 @@
         </div>
         <div class="sponsors__golden__item">
           <img src="./assets/images/golden-netmedia.png" alt="Netmedia people">
-          <img src="./assets/images/background-shapes/bg-half-circle-on-water.png" alt="Half-circle on water">
+          <img class="background" src="./assets/images/background-shapes/bg-half-circle-on-water.png" alt="Half-circle on water">
           <div class="sponsors__golden__item__text">
             <h4>ZLATNI SPONZOR</h4>
             <h3>Netmedia</h3>
@@ -323,7 +338,7 @@
         </div>
         <div class="sponsors__golden__item">
           <img src="./assets/images/golden-extension-engine.png" alt="Extension engine">
-          <img src="./assets/images/background-shapes/bg-gastal.png" alt="Pill on water">
+          <img class="background" src="./assets/images/background-shapes/bg-gastal.png" alt="Pill on water">
           <div class="sponsors__golden__item__text">
             <h4>ZLATNI SPONZOR</h4>
             <h3>ExtensionEngine</h3>
@@ -359,12 +374,12 @@
         <img src="./assets/images/logos/logo-bdr.png" alt="bdr">
         <img src="./assets/images/logos/logo-emovis.png" alt="emovis">
       </div>
-      <img src="./assets/images/background-shapes/bg-torus.png" alt="Cilinder on water">
+      <img class="background" src="./assets/images/background-shapes/bg-torus.png" alt="Cilinder on water">
       <h3 class="green">Organizacijski partneri</h3>
       <div class="sponsors__partners">
         <img src="./assets/images/logos/logo-fesb.png" alt="fesb">
       </div>
-      <img src="./assets/images/background-shapes/bg-ball-big.png" alt="Big ball">
+      <img class="background" src="./assets/images/background-shapes/bg-ball-big.png" alt="Big ball">
       <h3 class="green">Sponzor nagradne igre</h3>
       <div class="sponsors__game">
         <img src="./assets/images/logos/logo-futura-it.png" alt="Futura IT">
