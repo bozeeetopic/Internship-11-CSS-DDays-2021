@@ -190,7 +190,13 @@ p {
 .schedule__date-buttons button {
     width: 88px;
     height: 112px;
+}
+.schedule__date-buttons button:first-child {
     margin-right: 18px;
+}
+.schedule__overflow {
+    width: 100%;
+    overflow: hidden;
 }
 .schedule__schedule-buttons {
     margin-top: 40px;
@@ -199,6 +205,7 @@ p {
     flex-wrap: nowrap;
     width: max-content;
     overflow: hidden;
+    left: 0;
 }
 .schedule__schedule-buttons button {
     padding: 8px 16px;
@@ -258,9 +265,18 @@ p {
     justify-content: space-between;
 }
 
+@media only screen and (min-width:540px) {
+    .schedule__overflow {
+        display: flex;
+        justify-content: center;
+    }
+}
 @media only screen and (min-width:768px) {
     .schedule__item__header {
         justify-content: flex-start;
+    }
+    .schedule__schedule-buttons {
+        justify-content: center;
     }
 }
 @media only screen and (min-width:1024px) {
