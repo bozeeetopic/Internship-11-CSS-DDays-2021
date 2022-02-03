@@ -164,6 +164,22 @@ p {
         justify-content: center;
     }
     }
+
+@media only screen and (min-width:1024px) {
+    .conference_image{
+        margin-left: 90px;
+    }
+    }
+
+@media only screen and (min-width:1440px) {
+    .conference_image{
+        margin-left: 180px;
+    }
+    .conference__wrapper img {
+        padding-right: 68px;
+    }
+    }
+    
 /*--info-guy-section--*/
 
 /*--info-girl-section--*/
