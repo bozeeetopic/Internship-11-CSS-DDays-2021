@@ -2,9 +2,7 @@
 /*--nav-section--*/
 /*--header-section--*/
 /*--conference-section--*/
-/*--info-guy-section--*/
-/*--info-girl-section--*/
-/*--info-all-section--*/
+/*--info-section--*/
 /*--schedule-section--*/
 /*--sponsors-section--*/
 /*--sign-in-section--*/
@@ -15,65 +13,135 @@
 /*bg-black - #0A181B*/
 /*green - #30CEC2*/
 /*red - #ED5C5F*/
-/*body-highlight - #FFFFFF 80%*/
+/*body-highlight - #FFFC*/
 /*dark-blue - #1A3B44*/
 
 
-/*--global--*/
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Fuse V.2 Display";
-    color: white;
-}
-
-a {
-    text-decoration: none;  
-}
-h1 {
-    font-size: 64px;
-    line-height: 77px;
-}
-h2 {
-    font-size: 48px;
-    line-height: 58px;
-}
-h3 {
-    font-size: 32px;
-    line-height: 38px;
-}
-h4 {
-    font-size: 12px;
-    line-height: 13.54px;
-    padding: 8px 4px;
-}
-h5 {
-    font-size: 20px;
-    line-height: 30px;
-}
-h6 {
-    font-size: 24px;
-    line-height: 30px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 p {
-    font-size: 16px;
-    line-height: 24px;
+  max-width: 100vw;
 }
 
-.green {
-    color: #30CEC2;
-    border-color: #30CEC2;
+/*--global--*/
+@font-face {
+  font-family: "Fuse V.2 Display";
+  src: url(./../assets/fonts/FuseV.2Display-Regular.otf);
 }
-.green *{
-    color: #30CEC2;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fuse V.2 Display";
+  color: white;
+  font-weight: 400;
+}
+body {
+  background-color: #0a181b;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+​h1{
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 800;
+}
+h4 {
+  font-size: 10px;
+  line-height: 11.2px;
+  padding: 3px 6px;
+  background-color: #30cec2;
+  color: #000;
+  font-weight: 800;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 6px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+}
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+}
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fffc;
+}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 64px;
+    line-height: 77px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  h4 {
+    font-size: 12px;
+    line-height: 13.54px;
+    padding: 4px 8px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h6 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.green {
+  color: #30cec2;
+  border-color: #30cec2;
+}
+.green * {
+  color: #30cec2;
 }
 .gray {
-    color: #ffffff;
-    opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 800;
+}
+
+.background {
+  display: none;
+  z-index: -1;
+}
+@media only screen and (min-width: 1024px) {
+  .background {
+    display: block;
+  }
 }
 
 /*--nav-section--*/
@@ -82,11 +150,7 @@ p {
 
 /*--conference-section--*/
 
-/*--info-guy-section--*/
-
-/*--info-girl-section--*/
-
-/*--info-all-section--*/
+/*--info-section--*/
 
 /*--schedule-section--*/
 
@@ -94,9 +158,76 @@ p {
 
 /*--sign-in-section--*/
 
+.sign-in{
+  margin-top: 400px;
+  padding: 0 100px;
+}
+
+.sign-in__title{
+  text-align: center;
+}
+
+.sign-in__wrapper{
+  margin-top: 55px;
+  display: flex;
+}
+
+.sign-in__items-holder{
+  margin-top: 80px;
+}
+
+.sign-in__item{
+  margin-top: 105px;
+  position: relative;
+}
+
+.sign-in__item > img{
+  position: absolute;
+  top: -25px;
+  left: -40px;
+}
+
+.margin-small{
+  margin-bottom: 16px;
+}
+
+.sign-in__wrapper > img{
+  position: sticky;
+  top: 0;
+  bottom: 50px;
+}
+
+.sign-up-button{
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 900px){
+
+  .sign-in{
+    padding: 0 66px;
+  }
+  .sign-in__wrapper{
+    flex-direction: column-reverse;
+  }
+
+  .sign-in__items-holder{
+    margin-top: 60px;
+  }
+
+  .sign-in__item{
+    margin-top: 50px;
+  }
+
+  .sign-in__wrapper > img{
+    position: relative;
+    right: 40px;
+  }
+
+  .sign-in-button{
+    display: none;
+  }
+  
+}
 /*--dump-past-section--*/
 
 /*--footer-section--*/
-footer  h6 {
-    font-size: 18px;
-}
