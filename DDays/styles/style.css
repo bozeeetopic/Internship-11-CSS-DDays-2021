@@ -11,25 +11,70 @@
 /*--dump-past-section--*/
 /*--footer-section--*/
 
-
 /*bg-black - #0A181B*/
 /*green - #30CEC2*/
 /*red - #ED5C5F*/
 /*body-highlight - #FFFFFF 80%*/
 /*dark-blue - #1A3B44*/
 
+img {
+    max-width: 100vw;
+}
+p {
+    max-width: 100vw;
+}
 
 /*--global--*/
+@font-face {
+    font-family: "Fuse V.2 Display";
+    src: url(./../assets/fonts/FuseV.2Display-Regular.otf);
+}
 * {
     margin: 0;
     box-sizing: border-box;
     font-family: "Fuse V.2 Display";
     color: white;
+    font-weight: 400;
 }
-
+body {
+    background-color: #0A181B;
+    max-width: 1440px;
+    margin: 0 auto;
+}
 a {
     text-decoration: none;  
 }
+
+h1 {
+    font-size: 40px;
+    line-height: 48px;
+}
+h2 {
+    font-size: 32px;
+    line-height: 38px;
+}
+h3 {
+    font-size: 24px;
+    line-height: 36px;
+}
+h4 {
+    font-size: 10px;
+    line-height: 11.2px;
+    padding: 6px 3px;
+}
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+@media only screen and (min-width:1024px) {
 h1 {
     font-size: 64px;
     line-height: 77px;
@@ -59,7 +104,7 @@ p {
     font-size: 16px;
     line-height: 24px;
 }
-
+}
 .green {
     color: #30CEC2;
     border-color: #30CEC2;
@@ -73,30 +118,180 @@ p {
 }
 
 .bold {
-    font-weight: 700;
+    font-weight: 800;
+}
+
+.background{
+    display:none;
+}
+@media only screen and (min-width:1440px) {
+.background{
+    display:block;
+}
 }
 
 /*--nav-section--*/
 
-/*--header-section--*/
-
-/*--conference-section--*/
-
-/*--info-guy-section--*/
-
-/*--info-girl-section--*/
-
-/*--info-all-section--*/
-
-/*--schedule-section--*/
-
-/*--sponsors-section--*/
-
-/*--sign-in-section--*/
-
-/*--dump-past-section--*/
-
-/*--footer-section--*/
-footer  h6 {
-    font-size: 18px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:24px;
+    height: 100px;
+    width: 100%;
 }
+    
+.letter-logo {
+    width: 26px;
+    height: 31px;
+    margin-left: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.big-logo{
+    display:none;
+}
+
+.hamburger{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 14px;
+    transition: all 0.5s ease-in-out;
+    margin-right: 11px;
+}
+
+.hamburger > div {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger > div :nth-child(2n) {
+    transition: all 1s ease-out;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    height: 100%;
+    width: 100vw;
+    top:-4000vw;
+    left:0;
+    background-color: #0A181B;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.navbar p {
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.hidden {
+    opacity: 0;
+    position: fixed;
+    top:-400vw;
+}
+
+.hidden:checked ~ .navbar {
+    top:97px;
+}
+
+.hidden:checked ~ .letter-logo {
+    width: 33px;
+    height: 40px;
+    margin-left: 0;
+}
+
+.hidden:checked ~ .hamburger {
+    height: 0;
+}
+
+.hidden:checked ~ .hamburger > div:first-child{
+    position: absolute;
+    transform: rotate(45deg);
+}
+.hidden:checked ~ .hamburger > div:nth-child(2n){
+    position: absolute;
+    height: 24px;
+    opacity: 0;
+    transition: all 0s ease-in;
+}
+.hidden:checked ~ .hamburger > div:last-child{
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.navbar__item {
+    margin-top: 50px;
+}
+
+.navbar button {
+    color: white;
+}
+    
+    @media only screen and (min-width:768px) {
+    .letter-logo{
+        display:none;
+    }
+    .big-logo{
+        display:block;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position:static;
+        width: fit-content;
+    }
+    .navbar p {
+        font-weight: 400;
+    }
+    .invisible-text{
+        display: none;
+    }
+    .navbar__item {
+        margin-left: 40px;
+        margin-top: 0;
+    }}
+
+    @media only screen and (min-width:1024px) {
+        .navbar{
+            margin-right: 7px;
+        }
+        nav {
+            padding: 24px 92px;
+        }}
+    
+    /*--header-section--*/
+    
+    /*--conference-section--*/
+    
+    /*--info-guy-section--*/
+    
+    /*--info-girl-section--*/
+    
+    /*--info-all-section--*/
+    
+    /*--schedule-section--*/
+    
+    /*--sponsors-section--*/
+    
+    /*--sign-in-section--*/
+    
+    /*--dump-past-section--*/
+    
+    /*--footer-section--*/
+    footer  h6 {
+        font-size: 18px;
+    }
