@@ -2,78 +2,144 @@
 /*--nav-section--*/
 /*--header-section--*/
 /*--conference-section--*/
-/*--info-guy-section--*/
-/*--info-girl-section--*/
-/*--info-all-section--*/
+/*--info-section--*/
 /*--schedule-section--*/
 /*--sponsors-section--*/
 /*--sign-in-section--*/
 /*--dump-past-section--*/
 /*--footer-section--*/
 
-
 /*bg-black - #0A181B*/
 /*green - #30CEC2*/
 /*red - #ED5C5F*/
-/*body-highlight - #FFFFFF 80%*/
+/*body-highlight - #FFFC*/
 /*dark-blue - #1A3B44*/
 
-
-/*--global--*/
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Fuse V.2 Display";
-    color: white;
-}
-
-a {
-    text-decoration: none;  
-}
-h1 {
-    font-size: 64px;
-    line-height: 77px;
-}
-h2 {
-    font-size: 48px;
-    line-height: 58px;
-}
-h3 {
-    font-size: 32px;
-    line-height: 38px;
-}
-h4 {
-    font-size: 12px;
-    line-height: 13.54px;
-    padding: 8px 4px;
-}
-h5 {
-    font-size: 20px;
-    line-height: 30px;
-}
-h6 {
-    font-size: 24px;
-    line-height: 30px;
+img {
+  max-width: 100vw;
 }
 p {
-    font-size: 16px;
-    line-height: 24px;
+  max-width: 100vw;
 }
 
-.green {
-    color: #30CEC2;
-    border-color: #30CEC2;
+/*--global--*/
+@font-face {
+  font-family: "Fuse V.2 Display";
+  src: url(./../assets/fonts/FuseV.2Display-Regular.otf);
 }
-.green *{
-    color: #30CEC2;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fuse V.2 Display";
+  color: white;
+  font-weight: 400;
+}
+body {
+  background-color: #0a181b;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 800;
+}
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 800;
+}
+h4 {
+  font-size: 10px;
+  line-height: 11.2px;
+  padding: 3px 6px;
+  background-color: #30cec2;
+  color: #000;
+  font-weight: 800;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 6px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+}
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+}
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fffc;
+}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 64px;
+    line-height: 77px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  h4 {
+    font-size: 12px;
+    line-height: 13.54px;
+    padding: 4px 8px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h6 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.green {
+  color: #30cec2;
+  border-color: #30cec2;
+}
+.green * {
+  color: #30cec2;
 }
 .gray {
-    color: #ffffff;
-    opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 800;
+}
+
+.background {
+  display: none;
+  z-index: -1;
+}
+@media only screen and (min-width: 1024px) {
+  .background {
+    display: block;
+  }
 }
 
 /*--nav-section--*/
@@ -82,11 +148,7 @@ p {
 
 /*--conference-section--*/
 
-/*--info-guy-section--*/
-
-/*--info-girl-section--*/
-
-/*--info-all-section--*/
+/*--info-section--*/
 
 /*--schedule-section--*/
 
@@ -97,6 +159,73 @@ p {
 /*--dump-past-section--*/
 
 /*--footer-section--*/
-footer  h6 {
-    font-size: 18px;
+
+footer{
+  margin: 168px 32px;
+  padding: 55px 68px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__text{
+  margin-left: 68px;
+}
+
+.footer__icons{
+  margin-right: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__icons > img{
+  margin-right: 63px;
+}
+
+.social-media{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px){
+  footer{
+    flex-direction: column;
+    padding: 23px 24px;
+  }
+
+  .footer__text{
+    margin: unset;
+    margin-bottom: 33px;
+    text-align: center;
+  }
+
+  .footer__icons{
+    margin: unset;
+  }
+
+  .footer__icons > img{
+    margin-right: 45px;
+    width: 30%;
+  }
+
+  .social-media img{
+    width: 20%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  footer{
+    flex-direction: column;
+    padding: 23px 24px;
+  }
+
+  .footer__text{
+    margin: unset;
+    margin-bottom: 33px;
+    text-align: center;
+  }
 }
