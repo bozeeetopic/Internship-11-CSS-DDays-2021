@@ -193,7 +193,9 @@ p {
 
 .sign-in__wrapper > img{
   position: sticky;
+  max-height: 700px;
   top: 0;
+  left: 50px;
   bottom: 50px;
 }
 
@@ -201,7 +203,7 @@ p {
   margin-top: 80px;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 768px){
 
   .sign-in{
     padding: 0 66px;
@@ -220,7 +222,9 @@ p {
 
   .sign-in__wrapper > img{
     position: relative;
+    min-height: 70%;
     right: 40px;
+    left: unset;
   }
 
   .sign-in-button{
