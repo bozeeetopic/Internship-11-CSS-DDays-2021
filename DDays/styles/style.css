@@ -231,11 +231,12 @@ p {
         right: -150px;
         top: -200px;
     }
-    .info__stats__item{
-        margin-top: 0;
-    }
-    .info__stats__item:not(.info__stats__item:first-of-type) {
+    .info__stats__item {
         margin-top: 90px;
+    }
+    .info--guy .info__stats__item:first-of-type,
+    .info--girl .info__stats__item:first-of-type {
+        margin-top: 0;
     }
 }
 
