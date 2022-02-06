@@ -576,6 +576,10 @@ header button {
     grid-template-rows: 20px auto auto;
     grid-template-columns: 95px auto;
 }
+.schedule__item:hover i{
+  transform: scaleY(-1);
+  margin-bottom: 10px;
+}
 .schedule__item p:first-child {
     width: max-content;
     grid-row-start: 1;
@@ -600,6 +604,7 @@ header button {
 }
 .schedule__item i
 {
+    transition: all 0.5s ease-in-out;
     margin-top: 10px;
 }
 .schedule__item p:last-child
@@ -653,6 +658,10 @@ header button {
     .schedule__item i
     {
         margin-top: 1px;
+    }
+    .schedule__item:hover i{
+      transform: scaleY(-1);
+      margin-bottom: 5px;
     }
     .schedule__item .schedule__item__header h5
     {
