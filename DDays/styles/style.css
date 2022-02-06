@@ -22,13 +22,6 @@ p {
   max-width: 100vw;
 }
 
-img {
-    max-width: 100vw;
-}
-p {
-    max-width: 100vw;
-}
-
 /*--global--*/
 @font-face {
   font-family: "Fuse V.2 Display";
@@ -684,6 +677,11 @@ header button {
 
 /*--sponsors-section--*/
 
+.sponsors{
+  margin-top: 500px;
+  padding: 0 100px;
+}
+
 .sponsors__golden__title {
   text-align: center;
   margin-bottom: 80px;
@@ -697,14 +695,12 @@ header button {
 .sponsors__golden__item {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 160px;
-  margin-left: 100px;
 }
 
 .sponsors__golden__item:nth-child(2n) {
   flex-direction: row-reverse;
-  padding-left: 106px;
 }
 
 .sponsors__golden__item:last-child {
@@ -725,7 +721,11 @@ header button {
 
 .sponsors__golden__item__text {
   width: 50%;
-  padding: 0 60px;
+  padding: 0 106px 0 60px;
+}
+
+.sponsors__golden__item:nth-child(2n) > .sponsors__golden__item__text{
+  padding: 0 60px 0 106px;
 }
 
 .sponsors-margin-small,
@@ -769,7 +769,7 @@ header button {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .sponsors {
     padding: 0 24px;
   }
@@ -782,6 +782,10 @@ header button {
 
   .sponsors__golden__item:nth-child(2n) {
     flex-direction: column;
+    padding: unset;
+  }
+
+  .sponsors__golden__item:nth-child(2n) > .sponsors__golden__item__text{
     padding: unset;
   }
 
@@ -816,17 +820,26 @@ header button {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width:1000px) and (max-width: 1024px) {
   .sponsors__background__image {
     display: none;
+  }
+
+  .sponsors__golden__item:nth-child(2n) > .sponsors__golden__item__text{
+    padding: unset;
+  }
+
+  .sponsors__golden__item > img{
+    min-width: 50%;
+    height: auto;
   }
 }
 
 /*--sign-in-section--*/
 
 .sign-in {
-  margin-top: 400px;
-  padding: 0 100px;
+  margin-top: 380px;
+  padding-left: 100px;
 }
 
 .sign-in__title {
@@ -840,6 +853,7 @@ header button {
 
 .sign-in__items-holder {
   margin-top: 80px;
+  padding-left: 68px;
 }
 
 .sign-in__item {
@@ -848,6 +862,8 @@ header button {
 }
 
 .sign-in__item > img {
+  max-width: 100%;
+  height: auto;
   position: absolute;
   top: -25px;
   left: -40px;
@@ -860,20 +876,26 @@ header button {
 
 .sign-in__wrapper > img {
   position: sticky;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   top: 0;
-  left: 50px;
   bottom: 50px;
 }
 
 .sign-in-button {
   margin-top: 80px;
+  color: #0a181b;
+  background-color: #30cec2;
+  padding: 12px 32px;
+  border: solid 1px #30cec2;
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media screen and (max-width: 768px) {
   .sign-in {
-    padding: 0 66px;
+    padding: 0 20px;
   }
   .sign-in__wrapper {
     flex-direction: column-reverse;
@@ -881,6 +903,7 @@ header button {
 
   .sign-in__items-holder {
     margin-top: 60px;
+    padding: 0 24px;
   }
 
   .sign-in__item {
@@ -895,9 +918,9 @@ header button {
 
   .sign-in__wrapper > img {
     position: relative;
-    min-width: 80%;
-    min-height: 80%;
-    left: -30px;
+    width: 100%;
+    height: auto;
+    left: -10%;
   }
 
   .sign-in-button {
@@ -940,9 +963,11 @@ header button {
   position: relative;
   margin: 0 14px;
   height: auto;
-  width: 2526px;
   transition: transform 500ms ease;
-  
+}
+
+.dump-past__item img{
+  border-radius: 40px;
 }
 
 @keyframes looper {
@@ -974,12 +999,21 @@ header button {
   border-radius: 50%;
 }
 
+.grid__text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
 .text2016 {
   grid-area: c;
+  background-color:  rgba(255, 255, 255, 0.03);
 }
 
 .text2017 {
   grid-area: e;
+  background-color:  rgba(255, 255, 255, 0.03);
 }
 
 .grid__image-2016-1 {
@@ -1041,7 +1075,7 @@ footer{
 }
 
 .footer__icons{
-  margin-right: 68px;
+  margin-right: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1056,9 +1090,14 @@ footer{
   justify-content: space-between;
 }
 
+.social-media__icon::before{
+  margin-right: 35px;
+}
+
 @media screen and (max-width: 768px){
   footer{
     flex-direction: column;
+    align-items: center;
     padding: 23px 24px;
   }
 
@@ -1069,21 +1108,22 @@ footer{
   }
 
   .footer__icons{
+    width: inherit;
     margin: unset;
   }
 
   .footer__icons > img{
     margin-right: 45px;
     width: 30%;
+    text-align: center;
   }
 
-  .social-media img{
-    width: 20%;
-    height: auto;
+  .social-media:last-child{
+    margin-right: 0;
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width:786px) and (max-width: 1024px){
   footer{
     flex-direction: column;
     padding: 23px 24px;
