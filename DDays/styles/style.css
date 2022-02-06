@@ -891,17 +891,6 @@ header button {
   bottom: 50px;
 }
 
-.sign-in-button {
-  margin-top: 80px;
-  color: #0a181b;
-  background-color: #30cec2;
-  padding: 12px 32px;
-  border: solid 1px #30cec2;
-  border-radius: 15px;
-  font-size: 16px;
-  line-height: 24px;
-}
-
 @media screen and (max-width: 768px) {
   .sign-in {
     padding: 0 20px;
