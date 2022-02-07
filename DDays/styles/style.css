@@ -785,6 +785,7 @@ button {
 
 @media screen and (max-width: 900px) {
   .sponsors {
+    margin-top: 118px;
     padding: 0 24px;
   }
 
@@ -893,6 +894,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .sign-in {
+    margin-top: 165px;
     padding: 0 20px;
   }
   .sign-in__wrapper {
@@ -1059,7 +1061,7 @@ button {
     }
   
     50%{
-      transform: translateX(-3650px);
+      transform: translateX(-3000px);
     }
   }
 }
@@ -1068,6 +1070,19 @@ button {
 
   .dump-past__title {
     margin: 0 53px;
+  }
+
+  .dump-past__item__grid{
+    gap: 15px;
+  }
+
+  .dump-past__item__grid img{
+    height: 180px;
+  }
+
+  .grid__text-1, .grid__text-2{
+    max-width: 173px;
+    padding: 64px 0;
   }
 }
 
