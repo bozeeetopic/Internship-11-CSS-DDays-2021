@@ -308,7 +308,7 @@ header h1 {
 header p {
   margin-top: 16px;
 }
-header button {
+button {
   padding: 12px 32px;
   margin-top: 16px;
   color: #000;
@@ -317,6 +317,7 @@ header button {
   line-height: 24px;
   border-radius: 15px;
   border: none;
+  cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
   header {
@@ -728,13 +729,17 @@ header button {
   left: -100px;
 }
 
+.sponsors__golden__item > img{
+  padding: 0 24px;
+}
+
 .sponsors__golden__item__text {
   width: 50%;
-  padding: 0 106px 0 60px;
+  padding: 0 106px 0 36px;
 }
 
 .sponsors__golden__item:nth-child(2n) > .sponsors__golden__item__text{
-  padding: 0 60px 0 106px;
+  padding: 0 36px 0 106px;
 }
 
 .sponsors-margin-small,
@@ -778,13 +783,14 @@ header button {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   .sponsors {
     padding: 0 24px;
   }
 
   .sponsors__golden__item {
     flex-direction: column;
+    align-items: center;
     margin-bottom: 80px;
     padding: unset;
   }
@@ -796,6 +802,10 @@ header button {
 
   .sponsors__golden__item:nth-child(2n) > .sponsors__golden__item__text{
     padding: unset;
+  }
+
+  .sponsors__golden__item > img{
+    height: auto;
   }
 
   .sponsors__golden__item__text {
@@ -826,21 +836,6 @@ header button {
 
   .sponsors__bronze__background__image {
     display: none;
-  }
-}
-
-@media screen and (min-width:1000px) and (max-width: 1024px) {
-  .sponsors__background__image {
-    display: none;
-  }
-
-  .sponsors__golden__item:nth-child(2n) > .sponsors__golden__item__text{
-    padding: unset;
-  }
-
-  .sponsors__golden__item > img{
-    min-width: 50%;
-    height: auto;
   }
 }
 
@@ -883,8 +878,13 @@ header button {
   margin-bottom: 16px;
 }
 
+.sign-in-button{
+  margin-top: 80px;
+}
+
 .sign-in__wrapper > img {
   position: sticky;
+  overflow: visible;
   max-width: 100%;
   max-height: 100%;
   top: 0;
@@ -918,7 +918,7 @@ header button {
     position: relative;
     width: 100%;
     height: auto;
-    left: -10%;
+    left: -15%;
   }
 
   .sign-in-button {
@@ -958,7 +958,7 @@ header button {
 .dump-past__item {
   position: relative;
   margin: 0 22px;
-  animation: looper 50s ease-in-out infinite;
+  animation: looper 50s ease infinite;
 }
 
 @keyframes looper {
@@ -1044,14 +1044,31 @@ header button {
     "a a b b b c c c d d"
     "e e e f f g g h h h";
   gap: 22px;
+  align-items: center;
 }
 
 .dump-past__item__grid > *{
   border-radius: 40px;
-  height: auto;
 }
 
 @media screen and (max-width: 1024px){
+
+  @keyframes looper {
+    0%, 100%{
+      transform: translateX(15px);
+    }
+  
+    50%{
+      transform: translateX(-3400px);
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+
+  .dump-past__title {
+    margin: 0 53px;
+  }
 }
 
 /*--footer-section--*/
@@ -1077,6 +1094,7 @@ footer{
 .footer__icons{
   margin-right: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -1094,7 +1112,8 @@ footer{
   margin-right: 35px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 300px){
+
   footer{
     flex-direction: column;
     align-items: center;
@@ -1110,20 +1129,48 @@ footer{
   .footer__icons{
     width: inherit;
     margin: unset;
+    justify-content: center;
   }
 
   .footer__icons > img{
-    margin-right: 45px;
+    margin: unset;
+    margin-bottom: 33px;
     width: 30%;
-    text-align: center;
   }
 
-  .social-media:last-child{
-    margin-right: 0;
+  .social-media__icon::before{
+    margin-right: 5px;
   }
 }
 
-@media screen and (min-width:786px) and (max-width: 1024px){
+@media screen and (min-width: 300px) and (max-width: 768px){
+
+  footer{
+    flex-direction: column;
+    align-items: center;
+    padding: 23px 24px;
+  }
+
+  .footer__text{
+    margin: unset;
+    margin-bottom: 33px;
+    text-align: center;
+  }
+
+  .footer__icons{
+    width: inherit;
+    margin: unset;
+    justify-content: center;
+  }
+
+  .footer__icons > img{
+    margin: unset;
+    margin-bottom: 33px;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px){
   footer{
     flex-direction: column;
     padding: 23px 24px;
