@@ -308,7 +308,7 @@ header h1 {
 header p {
   margin-top: 16px;
 }
-button {
+.button {
   padding: 12px 32px;
   margin-top: 16px;
   color: #000;
@@ -539,6 +539,7 @@ button {
 .schedule__date-buttons button {
     width: 88px;
     height: 112px;
+    allign-text: center;
 }
 .schedule__date-buttons button:first-child {
     margin-right: 18px;
