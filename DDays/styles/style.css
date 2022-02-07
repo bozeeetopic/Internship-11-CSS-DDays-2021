@@ -444,9 +444,6 @@ header p {
         display: flex;
         justify-content: space-between;
     }
-    .info--all .info__stats__item {
-        width: 50%;
-    }
     .info__stats__item {
         margin-left: -25px;
     }
