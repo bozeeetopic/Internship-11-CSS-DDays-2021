@@ -934,8 +934,8 @@ button {
   }
 
   .sign-in__wrapper > img {
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
   }
 }
 
@@ -1059,7 +1059,7 @@ button {
     }
   
     50%{
-      transform: translateX(-3400px);
+      transform: translateX(-3650px);
     }
   }
 }
